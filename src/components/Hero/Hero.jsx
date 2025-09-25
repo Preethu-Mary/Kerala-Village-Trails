@@ -1,0 +1,27 @@
+import './Hero.css'
+
+function Hero() {
+  return (
+    <section id="hero" className="hero">
+      <h2 className="hero__title"></h2>
+
+      <div className="hero__image">
+        <div className="hero__text-overlay">
+          <h1>Discover your home away from home.</h1>
+          <br /><br />
+          <a href="#activities">
+            <button className="hero__button">View Listings</button>
+          </a>
+        </div>
+      </div>
+        <br />
+
+        <div className="hero__description">
+          Come, join us in exploring both our roots and routes. Experience a warm, homely stay with our family and friends. Travel through our village, learn its traditions, and immerse yourself in the essence of our heritage. Let this getaway become a story you’ll cherish and carry with you into tomorrow.
+        </div>
+      
+    </section>
+  );
+}
+
+export default Hero;
