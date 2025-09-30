@@ -27,9 +27,9 @@ function NavBar() {
       <ul className={`nav-links ${isOpen ? "show" : ""}`}>
         {/* Close Button (only visible on mobile) */}
         <li className="close-btn" onClick={closeMenu}>X</li>
-        <li><a href="#hero" onClick={closeMenu}>Home</a></li>
+        <li><a href="/" onClick={closeMenu}>Home</a></li>
         <li><a href="#activities" onClick={closeMenu}>Activities</a></li>
-        <li><a href="./contactPage/contact.html" onClick={closeMenu}>Contact</a></li>
+        <li><a href="/cart" onClick={closeMenu}>Cart</a></li>
       </ul>
     </nav>
   );

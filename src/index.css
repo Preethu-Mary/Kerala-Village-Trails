@@ -1,0 +1,6 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: auto; /* must NOT be 100% */
+  overflow-y: auto; /* allow page scrolling */
+}

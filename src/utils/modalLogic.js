@@ -1,4 +1,4 @@
-import Modal from "../components/Modal/Modal";
+import myimage from "../assets/Images/BeyondTourism/engagement.jpg";
 
 
 const activitiesData = {
@@ -25,7 +25,7 @@ const activitiesData = {
         title: 'Traditional Engagement Ceremony',
         subtitle: 'When families gather to exchange blessings and formally announce the match',
         images: [
-            'https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=800&h=400&fit=crop'
+            myimage
         ],
         price: 'USD 50 per person',
         description: 'Experience the beautiful tradition of a Kerala engagement ceremony...',
@@ -124,7 +124,7 @@ function stopAutoSlide() {
 }
 
 // Close modal
-function closeModal() {
+export function closeModal() {
     const modal = document.getElementById('activityModal');
     modal.classList.remove('active');
     document.body.style.overflow = 'auto';
@@ -133,7 +133,7 @@ function closeModal() {
 
 // Booking placeholder
 export function bookExperience() {
-    window.location.href = '../contactPage/contact.html';
+    window.location.href = '/cart';
 }
 
 // View full details placeholder
@@ -159,34 +159,19 @@ document.addEventListener('keydown', function (e) {
 });
 
 
-export function addToCart() {
-    const activity = activitiesData[currentActivityType];
-    if (!activity) return;
+export function addToCartLogic(navigate) {
+  const activity = activitiesData[currentActivityType];
+  if (!activity) return;
 
-    // Load existing cart from sessionStorage
-    let cart = JSON.parse(sessionStorage.getItem('cart')) || [];
+  const cart = JSON.parse(sessionStorage.getItem("cart")) || [];
+  const exists = cart.find(item => item.type === currentActivityType || item.title === activity.title);
 
-    // Check if the activity already exists in the cart using title or type
-    const exists = cart.find(item => item.type === currentActivityType || item.title === activity.title);
-
-    if (!exists) {
-        // Add the current activity to the cart
-        cart.push({
-            type: currentActivityType,
-            title: activity.title,
-        });
-
-        // Save updated cart
-        sessionStorage.setItem('cart', JSON.stringify(cart));
-
-        // Confirmation
-        alert(`${activity.title} has been added to your cart!`);
-
-        // Redirect to cart page
-        window.location.href = '../contactPage/contact.html';
-    } else {
-        alert(`${activity.title} is already in your cart!`);
-    }
+  if (!exists) {
+    cart.push({ type: currentActivityType, title: activity.title });
+    sessionStorage.setItem("cart", JSON.stringify(cart));
+    alert(`${activity.title} has been added to your cart!`);
+    navigate("/cart");
+  } else {
+    alert(`${activity.title} is already in your cart!`);
+  }
 }
-
-

@@ -1,45 +1,59 @@
 import "./Modal.css";
+import { closeModal, addToCartLogic, viewFullDetails } from "../../utils/modalLogic";
+import { useNavigate } from "react-router-dom";
 
 function Modal() {
+    const navigate = useNavigate();
 
-    return (
-        <div id="activityModal" class="modal">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div class="modal-slideshow">
-                        <div class="slideshow-container" id="modalSlideshowContainer">
-                            {/*  //Slides will be inserted dynamically */}
-                        </div>
-                    
-                    </div>
-
-                    <button class="modal-close" onclick="closeModal()">&times;</button>
-                    <div class="modal-overlay">
-                        <h2 id="modalTitle" class="modal-title"></h2>
-                        <p id="modalSubtitle" class="modal-subtitle"></p>
-                    </div>
-                </div>
-                <div class="modal-body">
-                
-                    
-                    <div class="modal-highlights">
-                        <h4>Experience Highlights</h4>
-                        <ul id="modalHighlights" class="modal-highlights-list"></ul>
-                    </div>
-                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
-                        Watch Video on YouTube
-                        </a>
-
-                    
-                    <div class="modal-actions">
-                        <button class="modal-book-btn" onclick="addToCart()">Book Now</button>
-            
-                        <button class="modal-details-btn" onclick="viewFullDetails()">USD 30</button>
-                    </div>
-                </div>
+    const handleAddToCart = () => {
+        addToCartLogic(navigate);
+    };
+  return (
+    <div id="activityModal" className="modal">
+      <div className="modal-content">
+        <div className="modal-header">
+          <div className="modal-slideshow">
+            <div className="slideshow-container" id="modalSlideshowContainer">
+              {/* Slides will be inserted dynamically */}
             </div>
+          </div>
+
+          <button className="modal-close" onClick={closeModal}>
+            &times;
+          </button>
+
+          <div className="modal-overlay">
+            <h2 id="modalTitle" className="modal-title"></h2>
+            <p id="modalSubtitle" className="modal-subtitle"></p>
+          </div>
         </div>
-    );
+
+        <div className="modal-body">
+          <div className="modal-highlights">
+            <h4>Experience Highlights</h4>
+            <ul id="modalHighlights" className="modal-highlights-list"></ul>
+          </div>
+
+          <a
+            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Watch Video on YouTube
+          </a>
+
+          <div className="modal-actions">
+            <button className="modal-book-btn" onClick={handleAddToCart}>
+              Book Now
+            </button>
+            <button className="modal-details-btn" onClick={viewFullDetails}>
+              USD 30
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default Modal
+export default Modal;

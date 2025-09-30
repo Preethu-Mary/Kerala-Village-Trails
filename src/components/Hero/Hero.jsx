@@ -3,8 +3,6 @@ import './Hero.css'
 function Hero() {
   return (
     <section id="hero" className="hero">
-      <h2 className="hero__title"></h2>
-
       <div className="hero__image">
         <div className="hero__text-overlay">
           <h1>Discover your home away from home.</h1>

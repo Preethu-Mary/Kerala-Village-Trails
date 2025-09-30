@@ -5,6 +5,7 @@ import Home from './pages/Home';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ListingDetail from './pages/ListingDetail';
+import CartPage from './pages/CartPage';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/listing/:id" element={<ListingDetail />} />
+        <Route path="/cart" element={<CartPage />} />
       </Routes>
       <Footer/>
     </Router>

@@ -1,0 +1,88 @@
+/* Cart.css */
+.cart {
+  padding: 2rem;
+  margin: 100px 8rem 0;
+}
+
+.cart-title {
+  margin-bottom: 1.5rem;
+}
+
+.cart-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+.cart-remove-btn {
+  background-color: #dc3545;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cart-remove-btn:hover {
+  background-color: #bb2d3b;
+}
+
+@media (max-width: 576px) {
+    .cart {
+        margin: 100px 2rem 0;
+    }
+    .cart-remove-btn .btn-text {
+        display: none;
+    }
+    .cart-remove-btn {
+        padding: 4px;
+        font-size: 14px;
+    }
+}
+
+
+/* General button reset */
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Custom secondary style */
+.btn-secondary {
+    margin-top: 1rem;
+    background-color: #4b6cb7;   /* bluish secondary */
+    color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #3b5998;   /* darker on hover */
+}
+
+.btn-secondary:active {
+  background-color: #2d4373;   /* even darker when clicked */
+}
+
+.btn-secondary:disabled {
+  background-color: #a0aec0;   /* gray when disabled */
+  cursor: not-allowed;
+}
+
+
+
+
