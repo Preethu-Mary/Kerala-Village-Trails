@@ -6,6 +6,7 @@
     transition: all 0.3s ease;
     color: white;
     cursor: pointer;
+    height: 100%;
 }
 
 .activity-card:hover {
@@ -23,10 +24,10 @@
 .activity-content {
     padding: 1.5rem;
     color:rgba(0, 0, 0, 0.5);
-      font-family: 'Work Sans', sans-serif;
+    font-family: 'Work Sans', sans-serif;
 }
 .activity-title {
-color: #2c3e50;
+    color: #2c3e50;
 }
 
 .activity-content h3 {

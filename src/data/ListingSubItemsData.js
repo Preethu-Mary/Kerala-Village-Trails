@@ -1,0 +1,62 @@
+import wedding from "../assets/Images/BeyondTourism/muslim-wedding.webp";
+import engagement from "../assets/Images/BeyondTourism/engagement.jpg";
+import chorunu from "../assets/Images/BeyondTourism/chorunu.png";
+import baptism from "../assets/Images/BeyondTourism/baptism.jpg";
+import housewarming from "../assets/Images/BeyondTourism/House-warming.jpg";
+import temple from "../assets/Images/BeyondTourism/Temple.jpg"
+
+export const listingDetails = {
+  2: { 
+    title: "Beyond Tourism",
+    subItems: [
+      {
+        id: 1,
+        title: "Wedding",
+        img: wedding,
+        description: "For us, a wedding is both a sacred promise and a joyful festival of love and commitment.",
+        price: "USD 50",
+        modalId: "wedding",
+      },
+      {
+        id: 2,
+        title: "Engagement",
+        img: engagement,
+        description: "When families gather to exchange blessings and formally announce the match.",
+        price: "USD 50",
+        modalId: "engagement",
+      },
+      {
+        id: 3,
+        title: "Noolukettu",
+        img: chorunu,
+        description: "A sacred thread called noolkettu is tied around the baby's waist as a blessing of health.",
+        price: "USD 50",
+        modalId: "noolukettu",
+      },
+      {
+        id: 4,
+        title: "Baptism",
+        img: baptism,
+        description: "Come and experience Baptism which symbolizes purification, blessing, and initiation into the christian faith.",
+        price: "USD 50",
+        modalId: "baptism",
+      },
+      {
+        id: 5,
+        title: "House Warming",
+        img: housewarming,
+        description: "The auspicious ceremony to bless the house and bring peace, prosperity and good luck to its residents.",
+        price: "USD 50",
+        modalId: "housewarming",
+      },
+      {
+        id: 6,
+        title: "Hindu Temple Visit",
+        img: temple,
+        description: "Experience the spiritual charm of Kerala with a visit to a traditional Hindu Temple. Witness vibrant rituals.",
+        price: "USD 50",
+        modalId: "temple",
+      },
+    ],
+  },
+};
