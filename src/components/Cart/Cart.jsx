@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import { getCart, removeFromCart, clearCart } from "../../utils/cartLogic";
 import { FaTrash } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import "./Cart.css";
 
 function Cart() {
   const [cart, setCart] = useState([]);
+  const navigate = useNavigate();
+
 
   useEffect(() => {
     setCart(getCart());
@@ -19,6 +22,11 @@ function Cart() {
     const updatedCart = clearCart();
     setCart(updatedCart);
   };
+
+  const handleBooking = () => {
+    navigate("/contact"); // replace "/booking" with your booking page route
+};
+
 
   return (
     <div className="cart">
@@ -38,9 +46,14 @@ function Cart() {
           ))
         )}
         {cart.length > 0 && (
-          <button onClick={handleClear} className="btn btn-secondary mt-3">
-            Clear Cart
-          </button>
+              <div className="cart-actions">
+                <button onClick={handleClear} className="btn btn-secondary mt-3">
+                Clear Cart
+                </button>
+                <button onClick={handleBooking} className="btn btn-primary btn btn-secondary">
+                Send Booking Request
+                </button>
+            </div>
         )}
       </div>
     </div>

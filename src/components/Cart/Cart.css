@@ -83,6 +83,21 @@
   cursor: not-allowed;
 }
 
+.cart-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn-primary {
+  background-color: #0d8c18;
+}
+
+.btn-primary:hover {
+  background-color: #215706;
+}
+
+
 
 
 
