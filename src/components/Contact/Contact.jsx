@@ -17,6 +17,18 @@ function Contact() {
     });
   }, []);
 
+   // Scroll to success message whenever it becomes visible
+  useEffect(() => {
+    if (successVisible) {
+      const successMsg = document.getElementById("successMessage");
+      if (successMsg) {
+        const yOffset = -120; // adjust for fixed navbar height
+        const y = successMsg.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }
+  }, [successVisible]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -32,9 +44,6 @@ function Contact() {
         setErrorMessage("");
         formElement.reset();
 
-        // Scroll into view
-        const successMsg = document.getElementById("successMessage");
-        if (successMsg) successMsg.scrollIntoView({ behavior: "smooth" });
       },
       (error) => {
         setSuccessVisible(false);
@@ -45,7 +54,8 @@ function Contact() {
   };
 
   return (
-    <div>
+    <div className="contact-container">
+        <span>Complete below form and send a booking request. We will contact you soon!</span>
         <div className="booking-form fade-in">
         <h2 className="form-title">Book Your Experience</h2>
 

@@ -3,16 +3,14 @@ import NavBar from './components/NavBar/NavBar'
 import Footer from './components/Footer/Footer'
 import Home from './pages/Home';
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import ListingDetail from './pages/ListingDetail';
 import CartPage from './pages/CartPage';
 import ContactPage from './pages/ContactPage';
 
 function App() {
-
   return (
-
-    <Router>
+    <>
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -20,9 +18,8 @@ function App() {
         <Route path="/cart" element={<CartPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
-      <Footer/>
-    </Router>
-    
+      <Footer />
+    </>
   )
 }
 

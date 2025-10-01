@@ -160,18 +160,18 @@ document.addEventListener('keydown', function (e) {
 
 
 export function addToCartLogic(navigate) {
-  const activity = activitiesData[currentActivityType];
-  if (!activity) return;
+    const activity = activitiesData[currentActivityType];
+    if (!activity) return;
 
-  const cart = JSON.parse(sessionStorage.getItem("cart")) || [];
-  const exists = cart.find(item => item.type === currentActivityType || item.title === activity.title);
+    const cart = JSON.parse(sessionStorage.getItem("cart")) || [];
+    const exists = cart.find(item => item.type === currentActivityType || item.title === activity.title);
 
-  if (!exists) {
-    cart.push({ type: currentActivityType, title: activity.title });
-    sessionStorage.setItem("cart", JSON.stringify(cart));
-    alert(`${activity.title} has been added to your cart!`);
+    if (!exists) {
+        cart.push({ type: currentActivityType, title: activity.title });
+        sessionStorage.setItem("cart", JSON.stringify(cart));
+        alert(`${activity.title} has been added to your cart!`);
+    } else {
+        alert(`${activity.title} is already in your cart!`);
+    }
     navigate("/cart");
-  } else {
-    alert(`${activity.title} is already in your cart!`);
-  }
 }

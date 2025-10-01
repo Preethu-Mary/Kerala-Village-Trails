@@ -44,7 +44,7 @@ function Modal() {
 
           <div className="modal-actions">
             <button className="modal-book-btn" onClick={handleAddToCart}>
-              Book Now
+              Add to Cart
             </button>
             <button className="modal-details-btn" onClick={viewFullDetails}>
               USD 30

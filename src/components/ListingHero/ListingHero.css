@@ -96,3 +96,20 @@
     color: #666;
     margin-top: 0.5rem;
 }
+
+ /* Responsive Design */
+@media (max-width: 768px) {
+
+    .listing__hero__description{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .listing__hero__title {
+        font-size: 2.2rem;
+    }
+
+    .listing__stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
