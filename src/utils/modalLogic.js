@@ -1,4 +1,6 @@
-import myimage from "../assets/Images/BeyondTourism/engagement.jpg";
+import eng1 from "../assets/Images/BeyondTourism/engagement.jpg";
+import eng2 from "../assets/Images/BeyondTourism/hindu.jpg";
+import temp1 from "../assets/Images/BeyondTourism/Temple.jpg";
 
 
 const activitiesData = {
@@ -6,8 +8,7 @@ const activitiesData = {
         title: 'Traditional Temple Visit',
         subtitle: 'Experience the spiritual heart of Kerala village life',
         images: [
-            "../Images/church.jpg",
-            "../Images/hindu.jpg"
+           temp1,eng2
         ],
         
         highlights: [
@@ -25,7 +26,7 @@ const activitiesData = {
         title: 'Traditional Engagement Ceremony',
         subtitle: 'When families gather to exchange blessings and formally announce the match',
         images: [
-            myimage
+            eng1, eng2
         ],
         price: 'USD 50 per person',
         description: 'Experience the beautiful tradition of a Kerala engagement ceremony...',

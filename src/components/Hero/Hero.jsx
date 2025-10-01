@@ -5,7 +5,7 @@ function Hero() {
     <section id="hero" className="hero">
       <div className="hero__image">
         <div className="hero__text-overlay">
-          <h1>Discover your home away from home.</h1>
+          <h1 className='hero__text'>Discover your home away from home.</h1>
           <br /><br />
           <a href="#activities">
             <button className="hero__button">View Listings</button>
