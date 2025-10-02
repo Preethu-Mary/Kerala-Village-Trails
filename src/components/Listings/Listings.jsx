@@ -2,7 +2,7 @@ import './Listings.css'
 import culturalArts from '../../assets/Images/Listing_Images/CulturalArts.jpg';
 import BeyondTourism from '../../assets/Images/Listing_Images/BeyondTourism.webp';
 import WildLife from '../../assets/Images/Listing_Images/WildLife.jpg';
-import Handicrafts from '../../assets/Images/Listing_Images/Handicrafts.jpg';
+import Handicrafts from '../../assets/Images/Listing_Images/Hcrafts.jpg';
 import AuthenticKeralaFlavours from '../../assets/Images/Listing_Images/AuthenticKeralaFlavours.jpg';
 import HandsInTheSoil from '../../assets/Images/Listing_Images/HandsInTheSoil.jpeg';
 import ListingItem from '../ListingItem/ListingItem';

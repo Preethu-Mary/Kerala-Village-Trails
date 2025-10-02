@@ -149,11 +149,6 @@
             grid-template-columns: 1fr;
         }
 
-        .booking-form,
-        .contact-info,
-        .social-media {
-            padding: 2rem;
-        }
     }
 
     /* Loading State */
