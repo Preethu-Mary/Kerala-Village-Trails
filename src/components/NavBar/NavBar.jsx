@@ -36,17 +36,12 @@ function NavBar() {
           </a>
         </li>
         <li>
-          <a href="#activities" onClick={closeMenu}>
-            <FaWalking style={{ marginRight: "5px" }} /> Activities
-          </a>
-        </li>
-        <li>
-          <a href="/cart" onClick={closeMenu}>
+          <a href="/#/cart" onClick={closeMenu}>
             <FaShoppingCart style={{ marginRight: "5px" }} /> Cart
           </a>
         </li>
         <li>
-          <a href="/contact" onClick={closeMenu}>
+          <a href="/#/contact" onClick={closeMenu}>
             <FaPhone  style={{ marginRight: "5px" }} /> Contact
           </a>
         </li>

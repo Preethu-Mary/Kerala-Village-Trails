@@ -1,4 +1,5 @@
 import './Hero.css'
+import { HashLink } from "react-router-hash-link";
 
 function Hero() {
   return (
@@ -7,9 +8,9 @@ function Hero() {
         <div className="hero__text-overlay">
           <h1 className='hero__text'>Discover your home away from home.</h1>
           <br /><br />
-          <a href="#activities">
+          <HashLink smooth to="/#activities">
             <button className="hero__button">View Listings</button>
-          </a>
+          </HashLink>
         </div>
       </div>
         <br />
