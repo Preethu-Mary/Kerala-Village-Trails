@@ -22,6 +22,60 @@ const activitiesData = {
             'Blessing ceremony participation'
         ]
     },
+    'wedding': {
+        title: 'Wedding',
+        subtitle: 'Experience the spiritual heart of Kerala village life',
+        images: [
+           temp1,eng2
+        ],
+        
+        highlights: [
+            'Visit ancient village temples',
+            'Witness traditional daily prayers',
+            'Participate in ritual offerings',
+            'Learn about temple architecture',
+            'Meet temple priests and devotees',
+            'Experience spiritual chanting',
+            'Traditional temple feast',
+            'Blessing ceremony participation'
+        ]
+    },
+    'noolukettu': {
+        title: 'Noolukettu',
+        subtitle: 'Experience the spiritual heart of Kerala village life',
+        images: [
+           temp1,eng2
+        ],
+        
+        highlights: [
+            'Visit ancient village temples',
+            'Witness traditional daily prayers',
+            'Participate in ritual offerings',
+            'Learn about temple architecture',
+            'Meet temple priests and devotees',
+            'Experience spiritual chanting',
+            'Traditional temple feast',
+            'Blessing ceremony participation'
+        ]
+    },
+    'baptism': {
+        title: 'Baptism',
+        subtitle: 'Experience the spiritual heart of Kerala village life',
+        images: [
+           temp1,eng2
+        ],
+        
+        highlights: [
+            'Visit ancient village temples',
+            'Witness traditional daily prayers',
+            'Participate in ritual offerings',
+            'Learn about temple architecture',
+            'Meet temple priests and devotees',
+            'Experience spiritual chanting',
+            'Traditional temple feast',
+            'Blessing ceremony participation'
+        ]
+    },
     'engagement': {
         title: 'Traditional Engagement Ceremony',
         subtitle: 'When families gather to exchange blessings and formally announce the match',
@@ -41,7 +95,25 @@ const activitiesData = {
             'Ceremonial gift exchanges'
         ]
     },
-    // ... (Add the rest of your data here unchanged)
+    'housewarming': {
+        title: 'House Warming',
+        subtitle: 'When families gather to exchange blessings and formally announce the match',
+        images: [
+            eng1, eng2
+        ],
+        price: 'USD 50 per person',
+        description: 'Experience the beautiful tradition of a Kerala engagement ceremony...',
+        highlights: [
+            'Traditional ring exchange ceremony',
+            'Family blessing rituals',
+            'Cultural music and prayers',
+            'Traditional sweets and refreshments',
+            'Henna application demonstration',
+            'Family storytelling sessions',
+            'Photography with the families',
+            'Ceremonial gift exchanges'
+        ]
+    },
 };
 
 // Global state
