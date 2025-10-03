@@ -1,6 +1,7 @@
 .activities {
     padding: 5rem 2rem;
     background: white;
+    scroll-margin-top: 80px; 
 }
 
 .activities-title {

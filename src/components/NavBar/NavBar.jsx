@@ -1,51 +1,42 @@
 import { useState } from "react";
 import { FaHome, FaWalking, FaShoppingCart, FaTimes, FaPhone } from "react-icons/fa";
 import "./NavBar.css";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen((prev) => !prev);
-  };
-
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
+  const toggleMenu = () => setIsOpen((prev) => !prev);
+  const closeMenu = () => setIsOpen(false);
 
   return (
     <nav className="navbar">
       <div className="logo">
-        <a href="/"><h1 className="logo-text">Village Trails</h1></a>
+        <Link to="/" onClick={closeMenu}><h1 className="logo-text">Village Trails</h1></Link>
       </div>
 
-      {/* Hamburger stays fixed */}
-      <div className="hamburger" onClick={toggleMenu}>
-        ☰
-      </div>
+      <div className="hamburger" onClick={toggleMenu}>☰</div>
 
-      {/* Nav Links */}
       <ul className={`nav-links ${isOpen ? "show" : ""}`}>
-        {/* Close Button (only visible on mobile) */}
-        <li className="close-btn" onClick={closeMenu}>
-          <FaTimes /> {/* Close icon */}
-        </li>
+        <li className="close-btn" onClick={closeMenu}><FaTimes /></li>
+
         <li>
-          <a href="/" onClick={closeMenu}>
+          <Link to="/" onClick={closeMenu}>
             <FaHome style={{ marginRight: "5px" }} /> Home
-          </a>
-        </li>
-        <li>
-          <a href="/#/cart" onClick={closeMenu}>
-            <FaShoppingCart style={{ marginRight: "5px" }} /> Cart
-          </a>
-        </li>
-        <li>
-          <a href="/#/contact" onClick={closeMenu}>
-            <FaPhone  style={{ marginRight: "5px" }} /> Contact
-          </a>
+          </Link>
         </li>
 
+        <li>
+          <Link to="/cart" onClick={closeMenu}>
+            <FaShoppingCart style={{ marginRight: "5px" }} /> Cart
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/contact" onClick={closeMenu}>
+            <FaPhone style={{ marginRight: "5px" }} /> Contact
+          </Link>
+        </li>
       </ul>
     </nav>
   );
