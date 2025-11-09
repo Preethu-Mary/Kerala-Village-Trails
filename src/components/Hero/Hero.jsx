@@ -2,25 +2,12 @@ import './Hero.css'
 
 function Hero() {
 
-const scrollToActivities = () => {
-  const el = document.getElementById('activities');
-  if (el) {
-    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    window.history.replaceState(null, null, "#activities");
-  }
-};
-
-
-
   return (
     <section id="hero" className="hero">
       <div className="hero__image">
         <div className="hero__text-overlay">
           <h1 className='hero__text'>Discover your home away from home.</h1>
           <br /><br />
-          <button onClick={scrollToActivities} className="hero__button">
-            View Listings
-          </button>
         </div>
       </div>
         <br />

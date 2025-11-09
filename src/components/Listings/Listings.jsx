@@ -7,8 +7,9 @@ import AuthenticKeralaFlavours from '../../assets/Images/Listing_Images/Authenti
 import HandsInTheSoil from '../../assets/Images/Listing_Images/HandsInTheSoil.jpeg';
 import ListingItem from '../ListingItem/ListingItem';
 import { Link } from 'react-router-dom';
+import { forwardRef } from "react";
 
-function Listings() {
+const Listings = forwardRef((props, ref) => {
     const listingData = [
         {   
             id:1,
@@ -49,7 +50,7 @@ function Listings() {
     ];
 
     return (
-        <section id="activities" className="activities">
+        <section ref={ref} id="activities" className="activities">
             <h2 className="activities-title">Traditions We Share</h2>
             <div className="activities-grid">
 
@@ -67,6 +68,6 @@ function Listings() {
             </div>
         </section>
     );
-}
+});
 
 export default Listings

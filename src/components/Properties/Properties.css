@@ -1,0 +1,118 @@
+.properties {
+  background-color: rgb(245, 243, 243);
+}
+
+.property-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.property-nav.show-all {
+  display: block;
+}
+
+.property-grid {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.property-grid.grid-view {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  transform: none !important;
+}
+
+.carousel-wrapper {
+  width: 80%;
+  overflow: hidden;
+}
+
+.show-all .carousel-wrapper {
+  width: 90%;
+  overflow: visible;
+  margin: 0 auto;
+}
+
+.property-card {
+  flex: 0 0 33.333%;
+  box-sizing: border-box;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.grid-view .property-card {
+  flex: none;
+}
+
+.arrow-btn {
+  background: rgba(113, 101, 73, 0.95);
+  border: none;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 40%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  z-index: 10;
+}
+
+.arrow-btn:hover {
+  background: rgba(162, 147, 110, 0.95);
+}
+
+.arrow-btn.left {
+  margin-right: 15px;
+}
+
+.arrow-btn.right {
+  margin-left: 15px;
+}
+
+@media (max-width: 768px) {
+  .property-card {
+    flex: 0 0 100%;
+  }
+  
+  .carousel-wrapper {
+    width: 95%;
+  }
+
+  .property-grid.grid-view {
+    grid-template-columns: 1fr;
+  }
+
+  .show-all .carousel-wrapper {
+    width: 95%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .property-grid.grid-view {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.view-more-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.view-more-btn {
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: rgba(113, 101, 73, 0.95);
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border-radius: 4px;
+}
+
+.view-more-btn:hover {
+  background-color: rgba(162, 147, 110, 0.95);
+}
